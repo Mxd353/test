@@ -42,7 +42,7 @@ int main(int argc, char **argv)
         ball->setPos(x,y);
         ball->setSpeed(xSpeed,ySpeed);
 
-        view.setWindowTitle("随机方向,随机速度");
+        view.setWindowTitle("随机方向随机速度");
         view.show();
 
 
