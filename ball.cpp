@@ -38,7 +38,7 @@ void Ball::advance(int step)
     if(!step)
         return;
 
-       if(!collidingItems().isEmpty()) //碰撞检测
+       if(!collidingItems().isEmpty()) //碰撞检测函数
         {
            if(x() <= -330  || x() >= 330)xspeed*=-1;
            if(y() <= -330  || y() >= 330)yspeed*=-1;
