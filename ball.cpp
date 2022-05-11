@@ -18,7 +18,7 @@ QRectF Ball::boundingRect() const
                   radius + penWidth, radius + penWidth);
 }
 
-QPainterPath Ball::shape() const
+QPainterPath Ball::shape() const//设置形状
 {
     QPainterPath path;
     path.addRect(po_x, po_y, radius, radius);
@@ -27,8 +27,8 @@ QPainterPath Ball::shape() const
 
 void Ball::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *)
 {
-    painter->setBrush(scene()->collidingItems(this).isEmpty() ? Qt::red : Qt::green);//碰撞检测
-    painter->drawEllipse(po_x, po_y, radius, radius);
+    painter->setBrush(scene()->collidingItems(this).isEmpty() ? Qt::red : Qt::green);//碰撞后变色
+    painter->drawEllipse(po_x, po_y, radius, radius);//画圆
 }
 //! [3]
 
